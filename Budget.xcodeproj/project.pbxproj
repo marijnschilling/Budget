@@ -18,6 +18,8 @@
 		E6BF7CA1212D986A00B6CFE6 /* DayBudget.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BF7CA0212D986A00B6CFE6 /* DayBudget.swift */; };
 		E6BF7CA4212D9D6600B6CFE6 /* DayBudgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BF7CA3212D9D6600B6CFE6 /* DayBudgetView.swift */; };
 		E6BF7CA7212DAD9900B6CFE6 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BF7CA6212DAD9900B6CFE6 /* Extensions.swift */; };
+		E6E256D7212EDE71001EA2A4 /* AddExpenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E256D6212EDE71001EA2A4 /* AddExpenseViewController.swift */; };
+		E6E256D9212EDFB4001EA2A4 /* AddExpenseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E256D8212EDFB4001EA2A4 /* AddExpenseView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		E6BF7CA0212D986A00B6CFE6 /* DayBudget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayBudget.swift; sourceTree = "<group>"; };
 		E6BF7CA3212D9D6600B6CFE6 /* DayBudgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayBudgetView.swift; sourceTree = "<group>"; };
 		E6BF7CA6212DAD9900B6CFE6 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		E6E256D6212EDE71001EA2A4 /* AddExpenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpenseViewController.swift; sourceTree = "<group>"; };
+		E6E256D8212EDFB4001EA2A4 /* AddExpenseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpenseView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +109,7 @@
 		E6BF7C6C212D954B00B6CFE6 /* Budget */ = {
 			isa = PBXGroup;
 			children = (
+				E6E256D5212EDE5D001EA2A4 /* Add Expense */,
 				E6BF7CA2212D9D3500B6CFE6 /* DayBudget */,
 				E6BF7C9F212D95BC00B6CFE6 /* Resources */,
 				E6BF7C9E212D95A800B6CFE6 /* AppDelegate */,
@@ -159,6 +164,15 @@
 				E6BF7CA3212D9D6600B6CFE6 /* DayBudgetView.swift */,
 			);
 			path = DayBudget;
+			sourceTree = "<group>";
+		};
+		E6E256D5212EDE5D001EA2A4 /* Add Expense */ = {
+			isa = PBXGroup;
+			children = (
+				E6E256D6212EDE71001EA2A4 /* AddExpenseViewController.swift */,
+				E6E256D8212EDFB4001EA2A4 /* AddExpenseView.swift */,
+			);
+			path = "Add Expense";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -295,9 +309,11 @@
 				E6BF7C70212D954B00B6CFE6 /* DayBudgetViewController.swift in Sources */,
 				E6BF7CA7212DAD9900B6CFE6 /* Extensions.swift in Sources */,
 				E6BF7C6E212D954B00B6CFE6 /* AppDelegate.swift in Sources */,
+				E6E256D9212EDFB4001EA2A4 /* AddExpenseView.swift in Sources */,
 				E6BF7C76212D954B00B6CFE6 /* Budget.xcdatamodeld in Sources */,
 				E6BF7CA1212D986A00B6CFE6 /* DayBudget.swift in Sources */,
 				E6BF7CA4212D9D6600B6CFE6 /* DayBudgetView.swift in Sources */,
+				E6E256D7212EDE71001EA2A4 /* AddExpenseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
