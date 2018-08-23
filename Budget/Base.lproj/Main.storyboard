@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2yZ-YW-qWf">
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.45000000000000001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2yZ-YW-qWf">
                                 <rect key="frame" x="0.0" y="124" width="375" height="60"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <nil key="textColor"/>
@@ -84,6 +84,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SWS-tN-jqu">
+                                <rect key="frame" x="0.0" y="20" width="375" height="323"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="xL1-0q-Pcb" appends="YES" id="Y09-W9-oxu"/>
+                                </connections>
+                            </view>
                             <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WYV-pn-BU5">
                                 <rect key="frame" x="0.0" y="343" width="375" height="324"/>
                                 <subviews>
@@ -127,7 +135,11 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="sRs-nG-9fL" firstAttribute="bottom" secondItem="WYV-pn-BU5" secondAttribute="bottom" id="5M3-wL-Rz5"/>
+                            <constraint firstItem="SWS-tN-jqu" firstAttribute="leading" secondItem="sRs-nG-9fL" secondAttribute="leading" id="Hvd-W8-nWV"/>
+                            <constraint firstItem="WYV-pn-BU5" firstAttribute="top" secondItem="SWS-tN-jqu" secondAttribute="bottom" id="JyG-WC-tKf"/>
                             <constraint firstItem="sRs-nG-9fL" firstAttribute="trailing" secondItem="WYV-pn-BU5" secondAttribute="trailing" id="LOj-ic-qpx"/>
+                            <constraint firstItem="sRs-nG-9fL" firstAttribute="trailing" secondItem="SWS-tN-jqu" secondAttribute="trailing" id="RGe-kf-BBI"/>
+                            <constraint firstItem="SWS-tN-jqu" firstAttribute="top" secondItem="sRs-nG-9fL" secondAttribute="top" id="Zc5-ax-oK6"/>
                             <constraint firstItem="WYV-pn-BU5" firstAttribute="leading" secondItem="sRs-nG-9fL" secondAttribute="leading" id="fQn-O5-TYW"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="sRs-nG-9fL"/>
@@ -137,6 +149,11 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z2M-cV-QBM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="xL1-0q-Pcb">
+                    <connections>
+                        <action selector="didTapDismiss:" destination="8sK-lO-rl3" id="8gS-FT-09j"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1364" y="27"/>
         </scene>

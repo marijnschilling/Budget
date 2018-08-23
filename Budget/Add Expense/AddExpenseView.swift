@@ -10,4 +10,5 @@ import UIKit
 
 public class AddExpenseView: UIView {
     @IBOutlet public var amountTextField: UITextField!
+    @IBOutlet public var dismissView: UIView!
 }
