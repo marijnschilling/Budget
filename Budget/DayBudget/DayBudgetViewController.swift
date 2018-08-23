@@ -20,7 +20,7 @@ class DayBudgetViewController: UIViewController {
     }
 
     private func loadBudget() {
-        let dayBudget = DayBudget(budget: 20, date: Date(), expenses: nil)
+        let dayBudget = DayBudget(budget: 20, date: Date())
 
         dayBudgetView.dayBudgetLabel.text = "\(dayBudget.budget)"
         dayBudgetView.balanceLabel.text = "\(dayBudget.balance)"
