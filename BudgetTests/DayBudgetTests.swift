@@ -24,13 +24,13 @@ class DayBudgetTests: XCTestCase {
         let dayBudget = DayBudget(budget: 20, date: someDate)
 
         XCTAssertEqual(dayBudget.budget, 20)
-        XCTAssertEqual(dayBudget.dateFormat.string(from: dayBudget.date), "11-07-18")
+        XCTAssertEqual(DayBudget.dateFormat.string(from: dayBudget.date), "11-07-18")
         XCTAssertEqual(dayBudget.balance, 20)
-        XCTAssertNil(dayBudget.expenses)
+        XCTAssertEqual(dayBudget.expenses, [])
     }
 
     func testAddExpense() {
-        var dayBudget = DayBudget(budget: 20, date: someDate)
+        let dayBudget = DayBudget(budget: 20, date: someDate)
         dayBudget.addExpense(5)
         XCTAssertEqual(dayBudget.balance, 15)
         dayBudget.addExpense(1)

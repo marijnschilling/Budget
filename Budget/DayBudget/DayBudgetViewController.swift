@@ -24,7 +24,7 @@ class DayBudgetViewController: UIViewController {
 
         dayBudgetView.dayBudgetLabel.text = "\(dayBudget.budget)"
         dayBudgetView.balanceLabel.text = "\(dayBudget.balance)"
-        title = dayBudget.dateFormat.string(from: dayBudget.date)
+        title = DayBudget.dateFormat.string(from: dayBudget.date)
     }
 }
 

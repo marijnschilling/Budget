@@ -8,20 +8,20 @@
 
 import Foundation
 
-public struct DayBudget {
-    public let budget: Int
-    public let date: Date
-    private(set) var expenses = [Int]()
-
-    public mutating func addExpense(_ expense: Int) {
-        expenses.append(expense)
-    }
-
-    public var dateFormat: DateFormatter {
+public class DayBudget {
+    public static var dateFormat: DateFormatter {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd-MM-yy"
 
         return dateFormatter
+    }
+
+    public let budget: Int
+    public let date: Date
+    private(set) var expenses = [Int]()
+
+    public func addExpense(_ expense: Int) {
+        expenses.append(expense)
     }
 
     public var balance: Int {
