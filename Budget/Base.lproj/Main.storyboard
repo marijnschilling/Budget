@@ -98,7 +98,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                         <connections>
-                                            <outlet property="delegate" destination="MdM-CN-SKD" id="Iqh-nK-UUl"/>
+                                            <outlet property="delegate" destination="8sK-lO-rl3" id="f4j-He-Rhj"/>
                                         </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fb7-K8-aS4">
@@ -109,7 +109,7 @@
                                         </constraints>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
-                                            <action selector="didTapAddButton" destination="MdM-CN-SKD" eventType="touchUpInside" id="Eih-wJ-YYT"/>
+                                            <action selector="didTapAddButton" destination="8sK-lO-rl3" eventType="touchUpInside" id="Lyi-Q9-uDj"/>
                                         </connections>
                                     </button>
                                 </subviews>
