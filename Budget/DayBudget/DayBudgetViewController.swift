@@ -9,7 +9,12 @@
 import UIKit
 
 class DayBudgetViewController: UIViewController {
-    let dayBudget = DayBudget(budget: 20, date: Date())
+    lazy var dayBudgetManager: DayBudgetManager = {
+        let dayBudgetManager = DayBudgetManager()
+        dayBudgetManager.persistentManager = UserDefaultsManager()
+
+        return dayBudgetManager
+    }()
 
     public var dayBudgetView: DayBudgetView! {
         guard isViewLoaded else { return nil }
@@ -22,9 +27,9 @@ class DayBudgetViewController: UIViewController {
     }
 
     private func updateBudget() {
-        dayBudgetView.dayBudgetLabel.text = "\(dayBudget.budget)"
-        dayBudgetView.balanceLabel.text = "\(dayBudget.balance)"
-        title = DayBudget.dateFormat.string(from: dayBudget.date)
+        dayBudgetView.dayBudgetLabel.text = "\(dayBudgetManager.budget())"
+        dayBudgetView.balanceLabel.text = "\(dayBudgetManager.balance())"
+        title = DayBudget.dateFormat.string(from: dayBudgetManager.date())
     }
 
     public override func prepare(for segue: UIStoryboardSegue,
@@ -41,7 +46,7 @@ extension DayBudgetViewController: AddExpenseViewControllerDelegate {
     }
 
     func addExpenseViewController(_ viewController: AddExpenseViewController, didAddExpense expense: Int) {
-        dayBudget.addExpense(expense)
+        dayBudgetManager.addExpense(expense)
         updateBudget()
     }
 }
