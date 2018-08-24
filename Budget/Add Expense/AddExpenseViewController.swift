@@ -29,11 +29,13 @@ class AddExpenseViewController: UIViewController {
     
     @IBAction func didTapDismiss(_ sender: UITapGestureRecognizer) {
         delegate?.addExpenseViewControllerDidCancel(self)
+        addExpenseView.amountTextField.resignFirstResponder()
         dismiss(animated: true)
     }
 
     @IBAction func didTapAddButton() {
         delegate?.addExpenseViewController(self, didAddExpense: amount)
+        addExpenseView.amountTextField.resignFirstResponder()
         dismiss(animated: true)
     }
 }
