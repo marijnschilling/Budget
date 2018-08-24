@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E6467D392130378D008AAEF0 /* TestPersistantManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6467D382130378D008AAEF0 /* TestPersistantManger.swift */; };
 		E6BF7C6E212D954B00B6CFE6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BF7C6D212D954B00B6CFE6 /* AppDelegate.swift */; };
 		E6BF7C70212D954B00B6CFE6 /* DayBudgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BF7C6F212D954B00B6CFE6 /* DayBudgetViewController.swift */; };
 		E6BF7C73212D954B00B6CFE6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6BF7C71212D954B00B6CFE6 /* Main.storyboard */; };
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E6467D382130378D008AAEF0 /* TestPersistantManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPersistantManger.swift; sourceTree = "<group>"; };
 		E6BF7C6A212D954B00B6CFE6 /* Budget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Budget.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6BF7C6D212D954B00B6CFE6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E6BF7C6F212D954B00B6CFE6 /* DayBudgetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayBudgetViewController.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 			children = (
 				E6BF7C85212D954D00B6CFE6 /* DayBudgetTests.swift */,
 				E6E256DA212F3B64001EA2A4 /* PersistentBalanceTests.swift */,
+				E6467D382130378D008AAEF0 /* TestPersistantManger.swift */,
 				E6BF7C87212D954D00B6CFE6 /* Info.plist */,
 			);
 			path = BudgetTests;
@@ -330,6 +333,7 @@
 			files = (
 				E6BF7C86212D954D00B6CFE6 /* DayBudgetTests.swift in Sources */,
 				E6E256DB212F3B64001EA2A4 /* PersistentBalanceTests.swift in Sources */,
+				E6467D392130378D008AAEF0 /* TestPersistantManger.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

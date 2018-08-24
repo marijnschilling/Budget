@@ -24,7 +24,7 @@ class DayBudgetViewController: UIViewController {
     private func updateBudget() {
         dayBudgetView.dayBudgetLabel.text = "\(dayBudgetManager.budget())"
         dayBudgetView.balanceLabel.text = "\(dayBudgetManager.balance())"
-        title = DayBudget.dateFormat.string(from: dayBudgetManager.date())
+        title = dayBudgetManager.dateString()
     }
 
     public override func prepare(for segue: UIStoryboardSegue,

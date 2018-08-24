@@ -11,16 +11,34 @@ import XCTest
 
 class PersistentBalanceTests: XCTestCase {
 
-    var someDate: Date {
-        var dateComponents = DateComponents()
-        dateComponents.year = 2018
-        dateComponents.month = 7
-        dateComponents.day = 11
-
-        return Calendar.current.date(from: dateComponents)!
+    var yesterDate: Date {
+        return Date().addingTimeInterval(-3600 * 24)
     }
 
     func testDayBudgetInitialization() {
-        
+        let budgetManager = DayBudgetManager(persistentManager: TestPersistantManger())
+
+        let budget = budgetManager.budget()
+        XCTAssertNotNil(budget)
+        XCTAssertEqual(budgetManager.dateString(), DayBudget.dateFormat.string(from: Date()))
+    }
+
+    func testDayBudgetPeristency() {
+        let oldBudget = DayBudget(budget: 20, date: yesterDate)
+        let budgetManager = DayBudgetManager(persistentManager: TestPersistantManger(oldBudget: oldBudget))
+
+        XCTAssertEqual(budgetManager.dateString(), DayBudget.dateFormat.string(from: Date()))
+        XCTAssertEqual(budgetManager.balance(), 40)
+        XCTAssertEqual(budgetManager.budget(), 20)
+    }
+
+    func testDayBudgetPeristencyWithExpenses() {
+        let oldBudget = DayBudget(budget: 20, date: yesterDate)
+        let budgetManager = DayBudgetManager(persistentManager: TestPersistantManger(oldBudget: oldBudget))
+        budgetManager.addExpense(10)
+
+        XCTAssertEqual(budgetManager.dateString(), DayBudget.dateFormat.string(from: Date()))
+        XCTAssertEqual(budgetManager.balance(), 30)
+        XCTAssertEqual(budgetManager.budget(), 20)
     }
 }
