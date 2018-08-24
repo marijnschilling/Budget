@@ -20,6 +20,8 @@
 		E6BF7CA7212DAD9900B6CFE6 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BF7CA6212DAD9900B6CFE6 /* Extensions.swift */; };
 		E6E256D7212EDE71001EA2A4 /* AddExpenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E256D6212EDE71001EA2A4 /* AddExpenseViewController.swift */; };
 		E6E256D9212EDFB4001EA2A4 /* AddExpenseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E256D8212EDFB4001EA2A4 /* AddExpenseView.swift */; };
+		E6E256DB212F3B64001EA2A4 /* PersistentBalanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E256DA212F3B64001EA2A4 /* PersistentBalanceTests.swift */; };
+		E6E256DD212F3C38001EA2A4 /* DayBudgetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E256DC212F3C38001EA2A4 /* DayBudgetManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,8 @@
 		E6BF7CA6212DAD9900B6CFE6 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		E6E256D6212EDE71001EA2A4 /* AddExpenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpenseViewController.swift; sourceTree = "<group>"; };
 		E6E256D8212EDFB4001EA2A4 /* AddExpenseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpenseView.swift; sourceTree = "<group>"; };
+		E6E256DA212F3B64001EA2A4 /* PersistentBalanceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentBalanceTests.swift; sourceTree = "<group>"; };
+		E6E256DC212F3C38001EA2A4 /* DayBudgetManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayBudgetManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				E6BF7C85212D954D00B6CFE6 /* DayBudgetTests.swift */,
+				E6E256DA212F3B64001EA2A4 /* PersistentBalanceTests.swift */,
 				E6BF7C87212D954D00B6CFE6 /* Info.plist */,
 			);
 			path = BudgetTests;
@@ -160,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				E6BF7CA0212D986A00B6CFE6 /* DayBudget.swift */,
+				E6E256DC212F3C38001EA2A4 /* DayBudgetManager.swift */,
 				E6BF7C6F212D954B00B6CFE6 /* DayBudgetViewController.swift */,
 				E6BF7CA3212D9D6600B6CFE6 /* DayBudgetView.swift */,
 			);
@@ -312,6 +318,7 @@
 				E6E256D9212EDFB4001EA2A4 /* AddExpenseView.swift in Sources */,
 				E6BF7C76212D954B00B6CFE6 /* Budget.xcdatamodeld in Sources */,
 				E6BF7CA1212D986A00B6CFE6 /* DayBudget.swift in Sources */,
+				E6E256DD212F3C38001EA2A4 /* DayBudgetManager.swift in Sources */,
 				E6BF7CA4212D9D6600B6CFE6 /* DayBudgetView.swift in Sources */,
 				E6E256D7212EDE71001EA2A4 /* AddExpenseViewController.swift in Sources */,
 			);
@@ -322,6 +329,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E6BF7C86212D954D00B6CFE6 /* DayBudgetTests.swift in Sources */,
+				E6E256DB212F3B64001EA2A4 /* PersistentBalanceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
