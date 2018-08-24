@@ -9,15 +9,21 @@
 import UIKit
 
 final class DayBudgetManager {
-    public var persistentManager: PersistDayBudgetStrategy!
+    public var persistentManager: PersistDayBudgetStrategy
 
     private var dayBudget: DayBudget
 
-    init() {
-      self.dayBudget = setDayBudget()
+    init(persistentManager: PersistDayBudgetStrategy) {
+        self.persistentManager = persistentManager
+        if let dayBudget = persistentManager.getDayBudget() {
+            self.dayBudget = dayBudget
+        } else {
+            self.dayBudget = DayBudget(budget: DayBudget.budget, date: Date())
+            persistentManager.storeDayBudget(self.dayBudget)
+        }
     }
 
-    private static func setDayBudget() -> DayBudget {
+    private func setDayBudget() -> DayBudget {
         guard let dayBudget = persistentManager.getDayBudget() else {
             let dayBudget = DayBudget(budget: DayBudget.budget, date: Date())
             persistentManager.storeDayBudget(dayBudget)

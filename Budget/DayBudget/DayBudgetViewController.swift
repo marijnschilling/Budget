@@ -9,12 +9,7 @@
 import UIKit
 
 class DayBudgetViewController: UIViewController {
-    lazy var dayBudgetManager: DayBudgetManager = {
-        let dayBudgetManager = DayBudgetManager()
-        dayBudgetManager.persistentManager = UserDefaultsManager()
-
-        return dayBudgetManager
-    }()
+    let dayBudgetManager = DayBudgetManager(persistentManager: UserDefaultsManager())
 
     public var dayBudgetView: DayBudgetView! {
         guard isViewLoaded else { return nil }
