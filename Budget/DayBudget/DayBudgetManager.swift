@@ -16,7 +16,7 @@ final class DayBudgetManager {
     init(persistentManager: PersistDayBudgetStrategy) {
         self.persistentManager = persistentManager
         if let dayBudget = persistentManager.getDayBudget() {
-            self.dayBudget = DayBudget(fromPreviousBudget: dayBudget)
+            self.dayBudget = dayBudget
         } else {
             self.dayBudget = DayBudget(budget: DayBudget.budget, date: Date())
             persistentManager.storeDayBudget(self.dayBudget)
@@ -29,7 +29,6 @@ final class DayBudgetManager {
             persistentManager.storeDayBudget(dayBudget)
 
             return dayBudget
-
         }
 
         return dayBudget

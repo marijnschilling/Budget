@@ -26,6 +26,7 @@ public class DayBudget {
 
     public init(budget: Int, date: Date) {
         self.budget = budget
+        self.balance = budget
         self.date = date
     }
 
