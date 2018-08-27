@@ -18,27 +18,27 @@ class PersistentBalanceTests: XCTestCase {
     func testDayBudgetInitialization() {
         let budgetManager = DayBudgetManager(persistentManager: TestPersistantManger())
 
-        let budget = budgetManager.budget()
+        let budget = budgetManager.budget
         XCTAssertNotNil(budget)
-        XCTAssertEqual(budgetManager.dateString(), DayBudget.dateFormat.string(from: Date()))
+        XCTAssertEqual(budgetManager.dateString, DayBudget.dateFormat.string(from: Date()))
     }
 
     func testDayBudgetPeristency() {
         let oldBudget = DayBudget(budget: 20, date: yesterDate)
         let budgetManager = DayBudgetManager(persistentManager: TestPersistantManger(oldBudget: oldBudget))
 
-        XCTAssertEqual(budgetManager.dateString(), DayBudget.dateFormat.string(from: Date()))
-        XCTAssertEqual(budgetManager.balance(), 40)
-        XCTAssertEqual(budgetManager.budget(), 20)
+        XCTAssertEqual(budgetManager.dateString, DayBudget.dateFormat.string(from: Date()))
+        XCTAssertEqual(budgetManager.balance, 40)
+        XCTAssertEqual(budgetManager.budget, 20)
     }
 
     func testDayBudgetPeristencyWithExpenses() {
         let oldBudget = DayBudget(budget: 20, date: yesterDate)
         let budgetManager = DayBudgetManager(persistentManager: TestPersistantManger(oldBudget: oldBudget))
-        budgetManager.addExpense(10)
+        budgetManager.add(expense: 10)
 
-        XCTAssertEqual(budgetManager.dateString(), DayBudget.dateFormat.string(from: Date()))
-        XCTAssertEqual(budgetManager.balance(), 30)
-        XCTAssertEqual(budgetManager.budget(), 20)
+        XCTAssertEqual(budgetManager.dateString, DayBudget.dateFormat.string(from: Date()))
+        XCTAssertEqual(budgetManager.balance, 30)
+        XCTAssertEqual(budgetManager.budget, 20)
     }
 }

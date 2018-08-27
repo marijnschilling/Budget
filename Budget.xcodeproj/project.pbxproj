@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		E6467D392130378D008AAEF0 /* TestPersistantManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6467D382130378D008AAEF0 /* TestPersistantManger.swift */; };
+		E6AD470D21340FE200EDA807 /* PersistDayBudgetStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AD470C21340FE100EDA807 /* PersistDayBudgetStrategy.swift */; };
+		E6AD470F21340FFC00EDA807 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AD470E21340FFC00EDA807 /* UserDefaultsManager.swift */; };
 		E6BF7C6E212D954B00B6CFE6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BF7C6D212D954B00B6CFE6 /* AppDelegate.swift */; };
 		E6BF7C70212D954B00B6CFE6 /* DayBudgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BF7C6F212D954B00B6CFE6 /* DayBudgetViewController.swift */; };
 		E6BF7C73212D954B00B6CFE6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6BF7C71212D954B00B6CFE6 /* Main.storyboard */; };
@@ -44,6 +46,8 @@
 
 /* Begin PBXFileReference section */
 		E6467D382130378D008AAEF0 /* TestPersistantManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPersistantManger.swift; sourceTree = "<group>"; };
+		E6AD470C21340FE100EDA807 /* PersistDayBudgetStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistDayBudgetStrategy.swift; sourceTree = "<group>"; };
+		E6AD470E21340FFC00EDA807 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		E6BF7C6A212D954B00B6CFE6 /* Budget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Budget.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6BF7C6D212D954B00B6CFE6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E6BF7C6F212D954B00B6CFE6 /* DayBudgetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayBudgetViewController.swift; sourceTree = "<group>"; };
@@ -92,6 +96,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E6AD470B21340FCD00EDA807 /* Persist Strategies */ = {
+			isa = PBXGroup;
+			children = (
+				E6AD470C21340FE100EDA807 /* PersistDayBudgetStrategy.swift */,
+				E6AD470E21340FFC00EDA807 /* UserDefaultsManager.swift */,
+			);
+			path = "Persist Strategies";
+			sourceTree = "<group>";
+		};
 		E6BF7C61212D954B00B6CFE6 = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +128,7 @@
 		E6BF7C6C212D954B00B6CFE6 /* Budget */ = {
 			isa = PBXGroup;
 			children = (
+				E6AD470B21340FCD00EDA807 /* Persist Strategies */,
 				E6E256D5212EDE5D001EA2A4 /* Add Expense */,
 				E6BF7CA2212D9D3500B6CFE6 /* DayBudget */,
 				E6BF7C9F212D95BC00B6CFE6 /* Resources */,
@@ -315,6 +329,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6AD470D21340FE200EDA807 /* PersistDayBudgetStrategy.swift in Sources */,
+				E6AD470F21340FFC00EDA807 /* UserDefaultsManager.swift in Sources */,
 				E6BF7C70212D954B00B6CFE6 /* DayBudgetViewController.swift in Sources */,
 				E6BF7CA7212DAD9900B6CFE6 /* Extensions.swift in Sources */,
 				E6BF7C6E212D954B00B6CFE6 /* AppDelegate.swift in Sources */,

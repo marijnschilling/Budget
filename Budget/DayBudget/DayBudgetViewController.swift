@@ -22,9 +22,9 @@ class DayBudgetViewController: UIViewController {
     }
 
     private func updateBudget() {
-        dayBudgetView.dayBudgetLabel.text = "\(dayBudgetManager.budget())"
-        dayBudgetView.balanceLabel.text = "\(dayBudgetManager.balance())"
-        title = dayBudgetManager.dateString()
+        dayBudgetView.dayBudgetLabel.text = "\(dayBudgetManager.budget)"
+        dayBudgetView.balanceLabel.text = "\(dayBudgetManager.balance)"
+        title = dayBudgetManager.dateString
     }
 
     public override func prepare(for segue: UIStoryboardSegue,
@@ -41,7 +41,7 @@ extension DayBudgetViewController: AddExpenseViewControllerDelegate {
     }
 
     func addExpenseViewController(_ viewController: AddExpenseViewController, didAddExpense expense: Int) {
-        dayBudgetManager.addExpense(expense)
+        dayBudgetManager.add(expense: expense)
         updateBudget()
     }
 }
