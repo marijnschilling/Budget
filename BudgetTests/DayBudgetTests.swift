@@ -42,7 +42,7 @@ class DayBudgetTests: XCTestCase {
         let dayBudget = DayBudget(budget: 20, date: someDate)
 
         XCTAssertEqual(dayBudget.budget, 20)
-        XCTAssertEqual(DayBudget.dateFormat.string(from: dayBudget.date), "11-07-18")
+        XCTAssertEqual(DateFormatter.dayMonthYear.string(from: dayBudget.date), "11-07-18")
         XCTAssertEqual(dayBudget.balance, 20)
         XCTAssertEqual(dayBudget.expenses, [])
     }

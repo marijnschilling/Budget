@@ -10,14 +10,6 @@ import Foundation
 
 public class DayBudget {
     public static let budget = 20
-
-    public static var dateFormat: DateFormatter {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd-MM-yy"
-
-        return dateFormatter
-    }
-
     public let budget: Int
     public let date: Date
 

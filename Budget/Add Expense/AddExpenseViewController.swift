@@ -19,11 +19,11 @@ class AddExpenseViewController: UIViewController {
     var amount = 0
     
     public var addExpenseView: AddExpenseView! {
-        guard isViewLoaded else { return nil }
-        return view as? AddExpenseView
+        return viewIfLoaded as? AddExpenseView
     }
 
     override func viewDidLoad() {
+        super.viewDidLoad()
         addExpenseView.amountTextField.becomeFirstResponder()
     }
     

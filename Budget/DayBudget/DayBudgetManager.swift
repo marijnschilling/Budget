@@ -48,7 +48,7 @@ final class DayBudgetManager {
     }
 
     public var dateString: String  {
-        return DayBudget.dateFormat.string(from: dayBudget.date)
+        return DateFormatter.dayMonthYear.string(from: dayBudget.date)
     }
 
     public func add(expense: Int) {

@@ -12,8 +12,7 @@ class DayBudgetViewController: UIViewController {
     let dayBudgetManager = DayBudgetManager(persistentManager: UserDefaultsManager())
 
     public var dayBudgetView: DayBudgetView! {
-        guard isViewLoaded else { return nil }
-        return view as? DayBudgetView
+        return viewIfLoaded as? DayBudgetView
     }
 
     public override func viewDidLoad() {
