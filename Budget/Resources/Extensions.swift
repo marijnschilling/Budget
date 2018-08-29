@@ -34,3 +34,13 @@ extension UIView {
         layer.shadowColor = color.cgColor
     }
 }
+
+extension DateFormatter {
+
+    public static var dayMonthYear: DateFormatter {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd-MM-yy"
+
+        return dateFormatter
+    }
+}

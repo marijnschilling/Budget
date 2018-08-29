@@ -20,4 +20,8 @@ public class DayBudgetView: UIView {
 
         addExpenseButtonView.addShadow(xOffset: 2, yOffset: 2, radius: 2)
     }
+
+    @IBAction func didTapAddButton() {
+
+    }
 }

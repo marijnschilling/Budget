@@ -9,22 +9,39 @@
 import UIKit
 
 class DayBudgetViewController: UIViewController {
+    let dayBudgetManager = DayBudgetManager(persistentManager: UserDefaultsManager())
+
     public var dayBudgetView: DayBudgetView! {
-        guard isViewLoaded else { return nil }
-        return view as? DayBudgetView
+        return viewIfLoaded as? DayBudgetView
     }
 
     public override func viewDidLoad() {
         super.viewDidLoad()
-        loadBudget()
+        updateBudget()
     }
 
-    private func loadBudget() {
-        let dayBudget = DayBudget(budget: 20, date: Date())
+    private func updateBudget() {
+        dayBudgetView.dayBudgetLabel.text = "\(dayBudgetManager.budget)"
+        dayBudgetView.balanceLabel.text = "\(dayBudgetManager.balance)"
+        title = dayBudgetManager.dateString
+    }
 
-        dayBudgetView.dayBudgetLabel.text = "\(dayBudget.budget)"
-        dayBudgetView.balanceLabel.text = "\(dayBudget.balance)"
-        title = DayBudget.dateFormat.string(from: dayBudget.date)
+    public override func prepare(for segue: UIStoryboardSegue,
+                                    sender: Any?) {
+        guard let viewController = segue.destination
+            as? AddExpenseViewController else { return }
+        viewController.delegate = self
+    }
+}
+
+extension DayBudgetViewController: AddExpenseViewControllerDelegate {
+    func addExpenseViewControllerDidCancel(_ viewController: AddExpenseViewController) {
+
+    }
+
+    func addExpenseViewController(_ viewController: AddExpenseViewController, didAddExpense expense: Int) {
+        dayBudgetManager.add(expense: expense)
+        updateBudget()
     }
 }
 

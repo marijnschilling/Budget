@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2yZ-YW-qWf">
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.45000000000000001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2yZ-YW-qWf">
                                 <rect key="frame" x="0.0" y="124" width="375" height="60"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <nil key="textColor"/>
@@ -46,6 +46,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="39"/>
                                 <state key="normal" title="💸"/>
+                                <connections>
+                                    <segue destination="8sK-lO-rl3" kind="presentation" id="gDZ-dY-4Sw"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -72,6 +75,87 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--Add Expense View Controller-->
+        <scene sceneID="UMa-At-mcO">
+            <objects>
+                <viewController modalPresentationStyle="overCurrentContext" id="8sK-lO-rl3" customClass="AddExpenseViewController" customModule="Budget" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" opaque="NO" contentMode="scaleToFill" id="MdM-CN-SKD" customClass="AddExpenseView" customModule="Budget" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SWS-tN-jqu">
+                                <rect key="frame" x="0.0" y="20" width="375" height="323"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="xL1-0q-Pcb" appends="YES" id="Y09-W9-oxu"/>
+                                </connections>
+                            </view>
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WYV-pn-BU5">
+                                <rect key="frame" x="0.0" y="343" width="375" height="324"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="🙈 Oh no... how much did you spend?" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ded-mL-FOG">
+                                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="44" id="6xg-nO-Q0L"/>
+                                            <constraint firstAttribute="height" constant="44" id="EZq-1z-qiy"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="ajq-Bc-IJc"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="8sK-lO-rl3" id="f4j-He-Rhj"/>
+                                        </connections>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fb7-K8-aS4">
+                                        <rect key="frame" x="165.5" y="64" width="44" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="DNf-Fh-PLU"/>
+                                            <constraint firstAttribute="width" constant="44" id="NzO-SD-kpD"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <action selector="didTapAddButton" destination="8sK-lO-rl3" eventType="touchUpInside" id="Lyi-Q9-uDj"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="ded-mL-FOG" firstAttribute="top" secondItem="WYV-pn-BU5" secondAttribute="top" constant="20" id="35L-rw-ZZZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="ded-mL-FOG" secondAttribute="trailing" id="CJt-KM-wtf"/>
+                                    <constraint firstItem="fb7-K8-aS4" firstAttribute="top" secondItem="ded-mL-FOG" secondAttribute="bottom" id="L17-5q-zvf"/>
+                                    <constraint firstAttribute="height" constant="324" id="M09-OP-OY4"/>
+                                    <constraint firstItem="ded-mL-FOG" firstAttribute="leading" secondItem="WYV-pn-BU5" secondAttribute="leading" id="kHs-HK-lsE"/>
+                                    <constraint firstItem="fb7-K8-aS4" firstAttribute="centerX" secondItem="WYV-pn-BU5" secondAttribute="centerX" id="rzY-0g-GyF"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="sRs-nG-9fL" firstAttribute="bottom" secondItem="WYV-pn-BU5" secondAttribute="bottom" id="5M3-wL-Rz5"/>
+                            <constraint firstItem="SWS-tN-jqu" firstAttribute="leading" secondItem="sRs-nG-9fL" secondAttribute="leading" id="Hvd-W8-nWV"/>
+                            <constraint firstItem="WYV-pn-BU5" firstAttribute="top" secondItem="SWS-tN-jqu" secondAttribute="bottom" id="JyG-WC-tKf"/>
+                            <constraint firstItem="sRs-nG-9fL" firstAttribute="trailing" secondItem="WYV-pn-BU5" secondAttribute="trailing" id="LOj-ic-qpx"/>
+                            <constraint firstItem="sRs-nG-9fL" firstAttribute="trailing" secondItem="SWS-tN-jqu" secondAttribute="trailing" id="RGe-kf-BBI"/>
+                            <constraint firstItem="SWS-tN-jqu" firstAttribute="top" secondItem="sRs-nG-9fL" secondAttribute="top" id="Zc5-ax-oK6"/>
+                            <constraint firstItem="WYV-pn-BU5" firstAttribute="leading" secondItem="sRs-nG-9fL" secondAttribute="leading" id="fQn-O5-TYW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="sRs-nG-9fL"/>
+                        <connections>
+                            <outlet property="amountTextField" destination="ded-mL-FOG" id="Y3H-ja-plY"/>
+                        </connections>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z2M-cV-QBM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="xL1-0q-Pcb">
+                    <connections>
+                        <action selector="didTapDismiss:" destination="8sK-lO-rl3" id="8gS-FT-09j"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1364" y="27"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="eKf-0P-GkL">

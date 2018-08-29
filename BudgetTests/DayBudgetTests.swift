@@ -20,11 +20,29 @@ class DayBudgetTests: XCTestCase {
         return Calendar.current.date(from: dateComponents)!
     }
 
+    var dayBeforeDate: Date {
+        var dateComponents = DateComponents()
+        dateComponents.year = 2018
+        dateComponents.month = 7
+        dateComponents.day = 10
+
+        return Calendar.current.date(from: dateComponents)!
+    }
+
+    var longAgoDate: Date {
+        var dateComponents = DateComponents()
+        dateComponents.year = 2018
+        dateComponents.month = 2
+        dateComponents.day = 12
+
+        return Calendar.current.date(from: dateComponents)!
+    }
+
     func testDayBudgetInitialization() {
         let dayBudget = DayBudget(budget: 20, date: someDate)
 
         XCTAssertEqual(dayBudget.budget, 20)
-        XCTAssertEqual(DayBudget.dateFormat.string(from: dayBudget.date), "11-07-18")
+        XCTAssertEqual(DateFormatter.dayMonthYear.string(from: dayBudget.date), "11-07-18")
         XCTAssertEqual(dayBudget.balance, 20)
         XCTAssertEqual(dayBudget.expenses, [])
     }
@@ -43,5 +61,29 @@ class DayBudgetTests: XCTestCase {
         dayBudget.addExpense(-5)
         dayBudget.addExpense(-5)
         XCTAssertEqual(dayBudget.balance, 6)
+    }
+
+    func testBudgetFromPreviousBudget() {
+        let yesterdayBudget = DayBudget(budget: 20, date: dayBeforeDate)
+        let dayBudget = DayBudget(fromPreviousBudget: yesterdayBudget, forDate: someDate)
+
+        XCTAssertEqual(dayBudget.balance, 40)
+    }
+
+    func testBudgetFromPreviousBudgetWithExpenses() {
+        let yesterdayBudget = DayBudget(budget: 20, date: dayBeforeDate)
+        yesterdayBudget.addExpense(5)
+        yesterdayBudget.addExpense(3)
+        yesterdayBudget.addExpense(10)
+        let dayBudget = DayBudget(fromPreviousBudget: yesterdayBudget, forDate: someDate)
+
+        XCTAssertEqual(dayBudget.balance, 22)
+    }
+
+    func testBudgetFromLongAgoBudget() {
+        let longAgoBudget = DayBudget(budget: 20, date: longAgoDate)
+        let dayBudget = DayBudget(fromPreviousBudget: longAgoBudget, forDate: someDate)
+
+        XCTAssertEqual(dayBudget.balance, 3000)
     }
 }

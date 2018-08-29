@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E6467D392130378D008AAEF0 /* TestPersistantManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6467D382130378D008AAEF0 /* TestPersistantManger.swift */; };
+		E6AD470D21340FE200EDA807 /* PersistDayBudgetStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AD470C21340FE100EDA807 /* PersistDayBudgetStrategy.swift */; };
+		E6AD470F21340FFC00EDA807 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AD470E21340FFC00EDA807 /* UserDefaultsManager.swift */; };
 		E6BF7C6E212D954B00B6CFE6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BF7C6D212D954B00B6CFE6 /* AppDelegate.swift */; };
 		E6BF7C70212D954B00B6CFE6 /* DayBudgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BF7C6F212D954B00B6CFE6 /* DayBudgetViewController.swift */; };
 		E6BF7C73212D954B00B6CFE6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6BF7C71212D954B00B6CFE6 /* Main.storyboard */; };
@@ -18,6 +21,10 @@
 		E6BF7CA1212D986A00B6CFE6 /* DayBudget.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BF7CA0212D986A00B6CFE6 /* DayBudget.swift */; };
 		E6BF7CA4212D9D6600B6CFE6 /* DayBudgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BF7CA3212D9D6600B6CFE6 /* DayBudgetView.swift */; };
 		E6BF7CA7212DAD9900B6CFE6 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BF7CA6212DAD9900B6CFE6 /* Extensions.swift */; };
+		E6E256D7212EDE71001EA2A4 /* AddExpenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E256D6212EDE71001EA2A4 /* AddExpenseViewController.swift */; };
+		E6E256D9212EDFB4001EA2A4 /* AddExpenseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E256D8212EDFB4001EA2A4 /* AddExpenseView.swift */; };
+		E6E256DB212F3B64001EA2A4 /* PersistentBalanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E256DA212F3B64001EA2A4 /* PersistentBalanceTests.swift */; };
+		E6E256DD212F3C38001EA2A4 /* DayBudgetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E256DC212F3C38001EA2A4 /* DayBudgetManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +45,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E6467D382130378D008AAEF0 /* TestPersistantManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPersistantManger.swift; sourceTree = "<group>"; };
+		E6AD470C21340FE100EDA807 /* PersistDayBudgetStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistDayBudgetStrategy.swift; sourceTree = "<group>"; };
+		E6AD470E21340FFC00EDA807 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		E6BF7C6A212D954B00B6CFE6 /* Budget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Budget.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6BF7C6D212D954B00B6CFE6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E6BF7C6F212D954B00B6CFE6 /* DayBudgetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayBudgetViewController.swift; sourceTree = "<group>"; };
@@ -55,6 +65,10 @@
 		E6BF7CA0212D986A00B6CFE6 /* DayBudget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayBudget.swift; sourceTree = "<group>"; };
 		E6BF7CA3212D9D6600B6CFE6 /* DayBudgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayBudgetView.swift; sourceTree = "<group>"; };
 		E6BF7CA6212DAD9900B6CFE6 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		E6E256D6212EDE71001EA2A4 /* AddExpenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpenseViewController.swift; sourceTree = "<group>"; };
+		E6E256D8212EDFB4001EA2A4 /* AddExpenseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpenseView.swift; sourceTree = "<group>"; };
+		E6E256DA212F3B64001EA2A4 /* PersistentBalanceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentBalanceTests.swift; sourceTree = "<group>"; };
+		E6E256DC212F3C38001EA2A4 /* DayBudgetManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayBudgetManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +96,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E6AD470B21340FCD00EDA807 /* Persist Strategies */ = {
+			isa = PBXGroup;
+			children = (
+				E6AD470C21340FE100EDA807 /* PersistDayBudgetStrategy.swift */,
+				E6AD470E21340FFC00EDA807 /* UserDefaultsManager.swift */,
+			);
+			path = "Persist Strategies";
+			sourceTree = "<group>";
+		};
 		E6BF7C61212D954B00B6CFE6 = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +128,8 @@
 		E6BF7C6C212D954B00B6CFE6 /* Budget */ = {
 			isa = PBXGroup;
 			children = (
+				E6AD470B21340FCD00EDA807 /* Persist Strategies */,
+				E6E256D5212EDE5D001EA2A4 /* Add Expense */,
 				E6BF7CA2212D9D3500B6CFE6 /* DayBudget */,
 				E6BF7C9F212D95BC00B6CFE6 /* Resources */,
 				E6BF7C9E212D95A800B6CFE6 /* AppDelegate */,
@@ -119,6 +144,8 @@
 			isa = PBXGroup;
 			children = (
 				E6BF7C85212D954D00B6CFE6 /* DayBudgetTests.swift */,
+				E6E256DA212F3B64001EA2A4 /* PersistentBalanceTests.swift */,
+				E6467D382130378D008AAEF0 /* TestPersistantManger.swift */,
 				E6BF7C87212D954D00B6CFE6 /* Info.plist */,
 			);
 			path = BudgetTests;
@@ -155,10 +182,20 @@
 			isa = PBXGroup;
 			children = (
 				E6BF7CA0212D986A00B6CFE6 /* DayBudget.swift */,
+				E6E256DC212F3C38001EA2A4 /* DayBudgetManager.swift */,
 				E6BF7C6F212D954B00B6CFE6 /* DayBudgetViewController.swift */,
 				E6BF7CA3212D9D6600B6CFE6 /* DayBudgetView.swift */,
 			);
 			path = DayBudget;
+			sourceTree = "<group>";
+		};
+		E6E256D5212EDE5D001EA2A4 /* Add Expense */ = {
+			isa = PBXGroup;
+			children = (
+				E6E256D6212EDE71001EA2A4 /* AddExpenseViewController.swift */,
+				E6E256D8212EDFB4001EA2A4 /* AddExpenseView.swift */,
+			);
+			path = "Add Expense";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,12 +329,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6AD470D21340FE200EDA807 /* PersistDayBudgetStrategy.swift in Sources */,
+				E6AD470F21340FFC00EDA807 /* UserDefaultsManager.swift in Sources */,
 				E6BF7C70212D954B00B6CFE6 /* DayBudgetViewController.swift in Sources */,
 				E6BF7CA7212DAD9900B6CFE6 /* Extensions.swift in Sources */,
 				E6BF7C6E212D954B00B6CFE6 /* AppDelegate.swift in Sources */,
+				E6E256D9212EDFB4001EA2A4 /* AddExpenseView.swift in Sources */,
 				E6BF7C76212D954B00B6CFE6 /* Budget.xcdatamodeld in Sources */,
 				E6BF7CA1212D986A00B6CFE6 /* DayBudget.swift in Sources */,
+				E6E256DD212F3C38001EA2A4 /* DayBudgetManager.swift in Sources */,
 				E6BF7CA4212D9D6600B6CFE6 /* DayBudgetView.swift in Sources */,
+				E6E256D7212EDE71001EA2A4 /* AddExpenseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,6 +348,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E6BF7C86212D954D00B6CFE6 /* DayBudgetTests.swift in Sources */,
+				E6E256DB212F3B64001EA2A4 /* PersistentBalanceTests.swift in Sources */,
+				E6467D392130378D008AAEF0 /* TestPersistantManger.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -482,7 +526,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.bakkenbaeck.Budget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -501,7 +545,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.bakkenbaeck.Budget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
