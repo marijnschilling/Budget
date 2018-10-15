@@ -14,6 +14,10 @@ struct Expense {
     let amount: Int
     let currency: Currency
 
+    var amountInEuro: Int {
+        return amount
+    }
+
     init(amount: Int, currency: Currency = .euro) {
         self.amount = amount
         self.currency = currency

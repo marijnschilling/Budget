@@ -39,7 +39,7 @@ extension DayBudgetViewController: AddExpenseViewControllerDelegate {
 
     }
 
-    func addExpenseViewController(_ viewController: AddExpenseViewController, didAddExpense expense: Int) {
+    func addExpenseViewController(_ viewController: AddExpenseViewController, didAddExpense expense: Expense) {
         dayBudgetManager.add(expense: expense)
         updateBudget()
     }

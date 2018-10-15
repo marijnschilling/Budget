@@ -51,7 +51,7 @@ final class DayBudgetManager {
         return DateFormatter.dayMonthYear.string(from: dayBudget.date)
     }
 
-    public func add(expense: Int) {
+    public func add(expense: Expense) {
         dayBudget.addExpense(expense)
         persistentManager.storeDayBudget(dayBudget)
     }
