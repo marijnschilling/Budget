@@ -49,17 +49,17 @@ class DayBudgetTests: XCTestCase {
 
     func testAddExpense() {
         let dayBudget = DayBudget(budget: 20, date: someDate)
-        dayBudget.addExpense(5)
+        dayBudget.addExpense(Expense(amount: 5))
         XCTAssertEqual(dayBudget.balance, 15)
-        dayBudget.addExpense(1)
-        dayBudget.addExpense(3)
+        dayBudget.addExpense(Expense(amount: 1))
+        dayBudget.addExpense(Expense(amount: 3))
         XCTAssertEqual(dayBudget.balance, 11)
-        dayBudget.addExpense(5)
-        dayBudget.addExpense(5)
-        dayBudget.addExpense(5)
+        dayBudget.addExpense(Expense(amount: 5))
+        dayBudget.addExpense(Expense(amount: 5))
+        dayBudget.addExpense(Expense(amount: 5))
         XCTAssertEqual(dayBudget.balance, -4)
-        dayBudget.addExpense(-5)
-        dayBudget.addExpense(-5)
+        dayBudget.addExpense(Expense(amount: -5))
+        dayBudget.addExpense(Expense(amount: -5))
         XCTAssertEqual(dayBudget.balance, 6)
     }
 
@@ -72,9 +72,9 @@ class DayBudgetTests: XCTestCase {
 
     func testBudgetFromPreviousBudgetWithExpenses() {
         let yesterdayBudget = DayBudget(budget: 20, date: dayBeforeDate)
-        yesterdayBudget.addExpense(5)
-        yesterdayBudget.addExpense(3)
-        yesterdayBudget.addExpense(10)
+        yesterdayBudget.addExpense(Expense(amount: 5))
+        yesterdayBudget.addExpense(Expense(amount: 3))
+        yesterdayBudget.addExpense(Expense(amount: 10))
         let dayBudget = DayBudget(fromPreviousBudget: yesterdayBudget, forDate: someDate)
 
         XCTAssertEqual(dayBudget.balance, 22)
