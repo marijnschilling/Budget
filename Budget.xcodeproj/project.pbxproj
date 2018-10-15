@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D197B7E5B67F2227C61EC3AA /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = D197BA833C2DD32EE562050F /* Expense.swift */; };
+		D197BAFA6CE7731CB42ED6B4 /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = D197BA833C2DD32EE562050F /* Expense.swift */; };
 		E6467D392130378D008AAEF0 /* TestPersistantManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6467D382130378D008AAEF0 /* TestPersistantManger.swift */; };
 		E6AD470D21340FE200EDA807 /* PersistDayBudgetStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AD470C21340FE100EDA807 /* PersistDayBudgetStrategy.swift */; };
 		E6AD470F21340FFC00EDA807 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AD470E21340FFC00EDA807 /* UserDefaultsManager.swift */; };
@@ -45,6 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D197BA833C2DD32EE562050F /* Expense.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Expense.swift; sourceTree = "<group>"; };
 		E6467D382130378D008AAEF0 /* TestPersistantManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPersistantManger.swift; sourceTree = "<group>"; };
 		E6AD470C21340FE100EDA807 /* PersistDayBudgetStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistDayBudgetStrategy.swift; sourceTree = "<group>"; };
 		E6AD470E21340FFC00EDA807 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
@@ -194,6 +197,7 @@
 			children = (
 				E6E256D6212EDE71001EA2A4 /* AddExpenseViewController.swift */,
 				E6E256D8212EDFB4001EA2A4 /* AddExpenseView.swift */,
+				D197BA833C2DD32EE562050F /* Expense.swift */,
 			);
 			path = "Add Expense";
 			sourceTree = "<group>";
@@ -340,6 +344,7 @@
 				E6E256DD212F3C38001EA2A4 /* DayBudgetManager.swift in Sources */,
 				E6BF7CA4212D9D6600B6CFE6 /* DayBudgetView.swift in Sources */,
 				E6E256D7212EDE71001EA2A4 /* AddExpenseViewController.swift in Sources */,
+				D197B7E5B67F2227C61EC3AA /* Expense.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,6 +355,7 @@
 				E6BF7C86212D954D00B6CFE6 /* DayBudgetTests.swift in Sources */,
 				E6E256DB212F3B64001EA2A4 /* PersistentBalanceTests.swift in Sources */,
 				E6467D392130378D008AAEF0 /* TestPersistantManger.swift in Sources */,
+				D197BAFA6CE7731CB42ED6B4 /* Expense.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
