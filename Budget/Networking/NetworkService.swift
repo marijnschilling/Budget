@@ -6,7 +6,7 @@
 import Foundation
 
 class NetworkService {
-    static let baseURL = "http://free.currencyconverterapi.com/api/v5"
+    static let baseURL = "https://free.currencyconverterapi.com/api/v5"
     static let valueKey = "val"
 
     func getConversionRate(from initialCurrency: Currency, to targetCurrency: Currency, _ completion: @escaping (Float) -> ()) {
