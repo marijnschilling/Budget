@@ -17,7 +17,6 @@ class TestPersistantManger: PersistDayBudgetStrategy {
     }
     
     func getDayBudget() -> DayBudget? {
-
         return budget
     }
 
