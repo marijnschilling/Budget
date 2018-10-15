@@ -21,7 +21,7 @@ class CurrencyService: CurrencyServiceStrategy {
         }
 
         networkService.getConversionRate(from: currency, to: baseCurrency) { conversion in
-
+            completion(Int(conversion) * amount)
         }
     }
 }
