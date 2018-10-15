@@ -16,7 +16,7 @@ protocol AddExpenseViewControllerDelegate: class {
 
 class AddExpenseViewController: UIViewController {
     public weak var delegate: AddExpenseViewControllerDelegate?
-    var expense = Expense(amount: 0)
+    var amount = 0
 
     public var addExpenseView: AddExpenseView! {
         return viewIfLoaded as? AddExpenseView
@@ -34,6 +34,12 @@ class AddExpenseViewController: UIViewController {
     }
 
     @IBAction func didTapAddButton() {
+        let expense = Expense(amount: amount)
+
+        expense.amountInEuro() { euro in
+
+        }
+
         delegate?.addExpenseViewController(self, didAddExpense: expense)
         addExpenseView.amountTextField.resignFirstResponder()
         dismiss(animated: true)
@@ -53,7 +59,7 @@ extension AddExpenseViewController: UITextFieldDelegate {
             return false
         }
 
-        expense = Expense(amount: updatedAmount)
+        amount = updatedAmount
 
         return true
     }

@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D197B383D8B987A17F535ED6 /* CurrencyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D197B91EA35B8C224C5248E0 /* CurrencyService.swift */; };
+		D197B46479A422B5913A8107 /* CurrencyServiceStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D197BA6873D4C26B0636D2B6 /* CurrencyServiceStrategy.swift */; };
 		D197B7E5B67F2227C61EC3AA /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = D197BA833C2DD32EE562050F /* Expense.swift */; };
 		D197B9C940062DB17E5CA124 /* ExpenseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D197B07C0F429243C98F3BAC /* ExpenseTests.swift */; };
+		D197BA10FF683400662AF10F /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = D197B0D5BE04FE580BED5B97 /* Currency.swift */; };
 		E6467D392130378D008AAEF0 /* TestPersistantManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6467D382130378D008AAEF0 /* TestPersistantManger.swift */; };
 		E6AD470D21340FE200EDA807 /* PersistDayBudgetStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AD470C21340FE100EDA807 /* PersistDayBudgetStrategy.swift */; };
 		E6AD470F21340FFC00EDA807 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AD470E21340FFC00EDA807 /* UserDefaultsManager.swift */; };
@@ -48,6 +51,9 @@
 
 /* Begin PBXFileReference section */
 		D197B07C0F429243C98F3BAC /* ExpenseTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpenseTests.swift; sourceTree = "<group>"; };
+		D197B0D5BE04FE580BED5B97 /* Currency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
+		D197B91EA35B8C224C5248E0 /* CurrencyService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyService.swift; sourceTree = "<group>"; };
+		D197BA6873D4C26B0636D2B6 /* CurrencyServiceStrategy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyServiceStrategy.swift; sourceTree = "<group>"; };
 		D197BA833C2DD32EE562050F /* Expense.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Expense.swift; sourceTree = "<group>"; };
 		E6467D382130378D008AAEF0 /* TestPersistantManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPersistantManger.swift; sourceTree = "<group>"; };
 		E6AD470C21340FE100EDA807 /* PersistDayBudgetStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistDayBudgetStrategy.swift; sourceTree = "<group>"; };
@@ -100,6 +106,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D197B24C482F4F6C0FC41E04 /* CurrencyService */ = {
+			isa = PBXGroup;
+			children = (
+				D197BA6873D4C26B0636D2B6 /* CurrencyServiceStrategy.swift */,
+				D197B91EA35B8C224C5248E0 /* CurrencyService.swift */,
+				D197B0D5BE04FE580BED5B97 /* Currency.swift */,
+			);
+			path = CurrencyService;
+			sourceTree = "<group>";
+		};
 		E6AD470B21340FCD00EDA807 /* Persist Strategies */ = {
 			isa = PBXGroup;
 			children = (
@@ -140,6 +156,7 @@
 				E6BF7C71212D954B00B6CFE6 /* Main.storyboard */,
 				E6BF7C79212D954D00B6CFE6 /* LaunchScreen.storyboard */,
 				E6BF7C74212D954B00B6CFE6 /* Budget.xcdatamodeld */,
+				D197B24C482F4F6C0FC41E04 /* CurrencyService */,
 			);
 			path = Budget;
 			sourceTree = "<group>";
@@ -347,6 +364,9 @@
 				E6BF7CA4212D9D6600B6CFE6 /* DayBudgetView.swift in Sources */,
 				E6E256D7212EDE71001EA2A4 /* AddExpenseViewController.swift in Sources */,
 				D197B7E5B67F2227C61EC3AA /* Expense.swift in Sources */,
+				D197B46479A422B5913A8107 /* CurrencyServiceStrategy.swift in Sources */,
+				D197B383D8B987A17F535ED6 /* CurrencyService.swift in Sources */,
+				D197BA10FF683400662AF10F /* Currency.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
