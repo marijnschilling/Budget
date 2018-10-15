@@ -5,7 +5,7 @@
 
 import Foundation
 
-enum Currency {
-    case euro
-    case dollar
+enum Currency: String {
+    case euro = "EUR"
+    case dollar = "USD"
 }
