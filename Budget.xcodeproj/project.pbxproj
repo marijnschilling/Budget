@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		D197B7E5B67F2227C61EC3AA /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = D197BA833C2DD32EE562050F /* Expense.swift */; };
 		D197B9C940062DB17E5CA124 /* ExpenseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D197B07C0F429243C98F3BAC /* ExpenseTests.swift */; };
-		D197BAFA6CE7731CB42ED6B4 /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = D197BA833C2DD32EE562050F /* Expense.swift */; };
 		E6467D392130378D008AAEF0 /* TestPersistantManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6467D382130378D008AAEF0 /* TestPersistantManger.swift */; };
 		E6AD470D21340FE200EDA807 /* PersistDayBudgetStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AD470C21340FE100EDA807 /* PersistDayBudgetStrategy.swift */; };
 		E6AD470F21340FFC00EDA807 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AD470E21340FFC00EDA807 /* UserDefaultsManager.swift */; };
@@ -358,7 +357,6 @@
 				E6BF7C86212D954D00B6CFE6 /* DayBudgetTests.swift in Sources */,
 				E6E256DB212F3B64001EA2A4 /* PersistentBalanceTests.swift in Sources */,
 				E6467D392130378D008AAEF0 /* TestPersistantManger.swift in Sources */,
-				D197BAFA6CE7731CB42ED6B4 /* Expense.swift in Sources */,
 				D197B9C940062DB17E5CA124 /* ExpenseTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
