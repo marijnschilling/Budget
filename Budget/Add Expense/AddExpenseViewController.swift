@@ -17,6 +17,7 @@ protocol AddExpenseViewControllerDelegate: class {
 class AddExpenseViewController: UIViewController {
     public weak var delegate: AddExpenseViewControllerDelegate?
     var amount = 0
+    var currency = Currency.euro
 
     public var addExpenseView: AddExpenseView! {
         return viewIfLoaded as? AddExpenseView
@@ -34,15 +35,21 @@ class AddExpenseViewController: UIViewController {
     }
 
     @IBAction func didTapAddButton() {
-        let expense = Expense(amount: amount)
+        let expense = Expense(amount: amount, currency: currency)
 
         expense.amountInEuro() { euro in
-
+            self.delegate?.addExpenseViewController(self, didAddExpense: Expense(amount: euro))
+            self.addExpenseView.amountTextField.resignFirstResponder()
+            self.dismiss(animated: true)
         }
+    }
 
-        delegate?.addExpenseViewController(self, didAddExpense: expense)
-        addExpenseView.amountTextField.resignFirstResponder()
-        dismiss(animated: true)
+    @IBAction func didToggleCurrencySwitch(_ sender: UISwitch) {
+        if sender.isOn {
+            currency = .dollar
+        } else {
+            currency = .euro
+        }
     }
 }
 
