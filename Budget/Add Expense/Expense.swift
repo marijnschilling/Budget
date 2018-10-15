@@ -11,8 +11,8 @@ enum Currency {
 }
 
 struct Expense {
-    let amount: Int
-    let currency: Currency
+    private let amount: Int
+    private let currency: Currency
 
     var amountInEuro: Int {
         return amount
