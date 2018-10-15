@@ -14,7 +14,7 @@ class CurrencyService: CurrencyServiceStrategy {
     }
 
 
-    func convert(_ amount: Int, from currency: Currency, completion: (Int) -> ()) {
+    func convert(_ amount: Int, from currency: Currency, completion: @escaping (Int) -> ()) {
         guard currency != baseCurrency else {
             completion(amount)
             return

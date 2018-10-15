@@ -21,7 +21,7 @@ struct Expense {
         self.currencyService = currencyService
     }
 
-    func amountInEuro(_ completion: (Int) -> ()) {
+    func amountInEuro(_ completion: @escaping (Int) -> ()) {
         currencyService.convert(amount, from: currency, completion: completion)
     }
 }

@@ -8,5 +8,5 @@ import Foundation
 protocol CurrencyServiceStrategy {
     var baseCurrency: Currency { get set}
 
-    func convert(_ amount: Int, from currency: Currency, completion: (Int) -> ())
+    func convert(_ amount: Int, from currency: Currency, completion: @escaping (Int) -> ())
 }
