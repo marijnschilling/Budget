@@ -9,7 +9,7 @@
 import UIKit
 
 final class DayBudgetManager {
-    public var persistentManager: PersistDayBudgetStrategy
+    var persistentManager: PersistDayBudgetStrategy
 
     private var dayBudget: DayBudget
 
@@ -35,23 +35,23 @@ final class DayBudgetManager {
         return dayBudget
     }
 
-    public var budget: Int {
+    var budget: Int {
         return dayBudget.budget
     }
 
-    public var balance: Int  {
+    var balance: Int  {
         return dayBudget.balance
     }
 
-    public var date: Date {
+    var date: Date {
         return dayBudget.date
     }
 
-    public var dateString: String  {
+    var dateString: String  {
         return DateFormatter.dayMonthYear.string(from: dayBudget.date)
     }
 
-    public func add(expense: Int) {
+    func add(expense: Int) {
         dayBudget.addExpense(expense)
         persistentManager.storeDayBudget(dayBudget)
     }

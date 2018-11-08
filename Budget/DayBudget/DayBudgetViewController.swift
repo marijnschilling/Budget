@@ -11,11 +11,11 @@ import UIKit
 class DayBudgetViewController: UIViewController {
     let dayBudgetManager = DayBudgetManager(persistentManager: UserDefaultsManager())
 
-    public var dayBudgetView: DayBudgetView! {
+    var dayBudgetView: DayBudgetView! {
         return viewIfLoaded as? DayBudgetView
     }
 
-    public override func viewDidLoad() {
+    override func viewDidLoad() {
         super.viewDidLoad()
         updateBudget()
     }
@@ -26,17 +26,15 @@ class DayBudgetViewController: UIViewController {
         title = dayBudgetManager.dateString
     }
 
-    public override func prepare(for segue: UIStoryboardSegue,
-                                    sender: Any?) {
-        guard let viewController = segue.destination
-            as? AddExpenseViewController else { return }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let viewController = segue.destination as? AddExpenseViewController else { return }
         viewController.delegate = self
     }
 }
 
 extension DayBudgetViewController: AddExpenseViewControllerDelegate {
     func addExpenseViewControllerDidCancel(_ viewController: AddExpenseViewController) {
-
+        //TODO: Implement cancel action
     }
 
     func addExpenseViewController(_ viewController: AddExpenseViewController, didAddExpense expense: Int) {

@@ -8,21 +8,21 @@
 
 import Foundation
 
-public class DayBudget {
-    public static let budget = 20
-    public let budget: Int
-    public let date: Date
+class DayBudget {
+    static let budget = 20
+    let budget: Int
+    let date: Date
 
     private(set) var expenses = [Int]()
     private(set) var balance = DayBudget.budget
 
-    public init(budget: Int, date: Date) {
+    init(budget: Int, date: Date) {
         self.budget = budget
         self.balance = budget
         self.date = date
     }
 
-    public init(fromPreviousBudget previousBudget: DayBudget, forDate date: Date = Date(), withBudget budget: Int = DayBudget.budget) {
+    init(fromPreviousBudget previousBudget: DayBudget, forDate date: Date = Date(), withBudget budget: Int = DayBudget.budget) {
         let calendar = NSCalendar.current
 
         let previousDate = calendar.startOfDay(for: previousBudget.date)
@@ -40,7 +40,7 @@ public class DayBudget {
         self.budget = budget
     }
 
-    public func addExpense(_ expense: Int) {
+    func addExpense(_ expense: Expense) {
         expenses.append(expense)
         balance -= expense
     }
