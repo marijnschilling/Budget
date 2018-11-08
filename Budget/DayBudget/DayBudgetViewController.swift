@@ -37,7 +37,7 @@ extension DayBudgetViewController: AddExpenseViewControllerDelegate {
         //TODO: Implement cancel action
     }
 
-    func addExpenseViewController(_ viewController: AddExpenseViewController, didAddExpense expense: Int) {
+    func addExpenseViewController(_ viewController: AddExpenseViewController, didAddExpense expense: Expense) {
         dayBudgetManager.add(expense: expense)
         updateBudget()
     }

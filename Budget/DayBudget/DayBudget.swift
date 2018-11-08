@@ -13,7 +13,7 @@ class DayBudget {
     let budget: Int
     let date: Date
 
-    private(set) var expenses = [Int]()
+    private(set) var expenses = [Expense]()
     private(set) var balance = DayBudget.budget
 
     init(budget: Int, date: Date) {
@@ -42,6 +42,7 @@ class DayBudget {
 
     func addExpense(_ expense: Expense) {
         expenses.append(expense)
-        balance -= expense
+        //TODO: balance should be a computed property, no?
+        balance -= expense.amount
     }
 }

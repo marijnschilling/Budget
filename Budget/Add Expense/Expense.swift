@@ -13,7 +13,7 @@ struct Expense {
     let description: String?
     let date: Date
 
-    init(withAmount amount: Int, description: String?, date: Date = Date()) {
+    init(withAmount amount: Int, description: String? = nil, date: Date = Date()) {
         self.amount = amount
         self.description = description
         self.date = date
