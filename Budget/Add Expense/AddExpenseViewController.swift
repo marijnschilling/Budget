@@ -11,7 +11,7 @@ import UIKit
 
 protocol AddExpenseViewControllerDelegate: class {
     func addExpenseViewControllerDidCancel(_ viewController: AddExpenseViewController)
-    func addExpenseViewController(_ viewController: AddExpenseViewController, didAddExpense expense: Int)
+    func addExpenseViewController(_ viewController: AddExpenseViewController, didAddExpense expense: Expense)
 }
 
 class AddExpenseViewController: UIViewController {
@@ -34,7 +34,7 @@ class AddExpenseViewController: UIViewController {
     }
 
     @IBAction func didTapAddButton() {
-        delegate?.addExpenseViewController(self, didAddExpense: amount)
+        delegate?.addExpenseViewController(self, didAddExpense: Expense(withAmount: amount))
         addExpenseView.amountTextField.resignFirstResponder()
         dismiss(animated: true)
     }

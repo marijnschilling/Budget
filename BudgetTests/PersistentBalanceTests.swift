@@ -35,7 +35,7 @@ class PersistentBalanceTests: XCTestCase {
     func testDayBudgetPeristencyWithExpenses() {
         let oldBudget = DayBudget(budget: 20, date: yesterDate)
         let budgetManager = DayBudgetManager(persistentManager: TestPersistantManger(oldBudget: oldBudget))
-        budgetManager.add(expense: 10)
+        budgetManager.add(expense: Expense(withAmount: 10))
 
         XCTAssertEqual(budgetManager.dateString, DateFormatter.dayMonthYear.string(from: Date()))
         XCTAssertEqual(budgetManager.balance, 30)

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E6467D392130378D008AAEF0 /* TestPersistantManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6467D382130378D008AAEF0 /* TestPersistantManger.swift */; };
+		E67C881A2194518B00D08C05 /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67C88192194518B00D08C05 /* Expense.swift */; };
 		E6AD470D21340FE200EDA807 /* PersistDayBudgetStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AD470C21340FE100EDA807 /* PersistDayBudgetStrategy.swift */; };
 		E6AD470F21340FFC00EDA807 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AD470E21340FFC00EDA807 /* UserDefaultsManager.swift */; };
 		E6BF7C6E212D954B00B6CFE6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BF7C6D212D954B00B6CFE6 /* AppDelegate.swift */; };
@@ -46,6 +47,7 @@
 
 /* Begin PBXFileReference section */
 		E6467D382130378D008AAEF0 /* TestPersistantManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPersistantManger.swift; sourceTree = "<group>"; };
+		E67C88192194518B00D08C05 /* Expense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expense.swift; sourceTree = "<group>"; };
 		E6AD470C21340FE100EDA807 /* PersistDayBudgetStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistDayBudgetStrategy.swift; sourceTree = "<group>"; };
 		E6AD470E21340FFC00EDA807 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		E6BF7C6A212D954B00B6CFE6 /* Budget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Budget.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -194,6 +196,7 @@
 			children = (
 				E6E256D6212EDE71001EA2A4 /* AddExpenseViewController.swift */,
 				E6E256D8212EDFB4001EA2A4 /* AddExpenseView.swift */,
+				E67C88192194518B00D08C05 /* Expense.swift */,
 			);
 			path = "Add Expense";
 			sourceTree = "<group>";
@@ -329,6 +332,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E67C881A2194518B00D08C05 /* Expense.swift in Sources */,
 				E6AD470D21340FE200EDA807 /* PersistDayBudgetStrategy.swift in Sources */,
 				E6AD470F21340FFC00EDA807 /* UserDefaultsManager.swift in Sources */,
 				E6BF7C70212D954B00B6CFE6 /* DayBudgetViewController.swift in Sources */,
